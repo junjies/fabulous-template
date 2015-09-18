@@ -1,4 +1,4 @@
-package fabulous.template.dao.file;
+package fabulous.template.file.read.dao;
 
 import java.io.IOException;
 import java.util.ArrayList;
