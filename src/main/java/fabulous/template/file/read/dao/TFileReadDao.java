@@ -73,8 +73,10 @@ public class TFileReadDao<T> {
 		T t;
 		try {
 			t = clazz.newInstance();
-		} catch (InstantiationException | IllegalAccessException e) {
-			throw new RuntimeException(String.format("Exception happened when get instance of %s", clazz.getName(), e));
+		} catch (InstantiationException e) {
+			throw new RuntimeException(String.format("InstantiationException happened when get instance of %s", clazz.getName(), e));
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(String.format("IllegalAccessException happened when get instance of %s", clazz.getName(), e));
 		}
 
 		Field[] fields = clazz.getDeclaredFields();
